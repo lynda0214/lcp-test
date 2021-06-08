@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import {useState, useEffect} from 'react';
 import './App.css';
 
 function App() {
+
+  const [displayA, setDisplayA] = useState(false);
+  const [displayB, setDisplayB] = useState(false);
+  const [displayBL, setDisplayBL] = useState(false);
+  const [displayC, setDisplayC] = useState(false);
+
+  // as compomnentDidMount
+  useEffect(() => {
+    setTimeout(() => setDisplayA(true), 1000);
+    setTimeout(() => setDisplayB(true), 2000);
+    setTimeout(() => setDisplayBL(true), 3000);
+    setTimeout(() => setDisplayC(true), 6000);
+  }, []);
+
+  const bClasses = displayBL ? 'b b--large' : 'b';
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {displayA && <img src="100.png" className="a"/>}
+      {displayB && <img src="300.png" className={bClasses}/>}
+      {displayC && <img src="500.png" className="c"/>}
     </div>
   );
 }
