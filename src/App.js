@@ -10,10 +10,10 @@ function App() {
 
   // as compomnentDidMount
   useEffect(() => {
-    setTimeout(() => setDisplayA(true), 1000);
-    setTimeout(() => setDisplayB(true), 2000);
-    setTimeout(() => setDisplayBL(true), 3000);
-    setTimeout(() => setDisplayC(true), 6000);
+    setTimeout(() => setDisplayA(true), 500);
+    setTimeout(() => setDisplayB(true), 1000);
+    setTimeout(() => setDisplayBL(true), 1500);
+    setTimeout(() => setDisplayC(true), 3000);
   }, []);
 
   const bClasses = displayBL ? 'b b--large' : 'b';
