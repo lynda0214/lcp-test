@@ -11,8 +11,8 @@
   transition: width 0.5s ease-in;
 }
 
-.b--large {
-  width: 120px;
+.b--shrink {
+  width: 90px;
 }
 
 .c {

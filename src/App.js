@@ -5,18 +5,18 @@ function App() {
 
   const [displayA, setDisplayA] = useState(false);
   const [displayB, setDisplayB] = useState(false);
-  const [displayBL, setDisplayBL] = useState(false);
+  const [displayBS, setDisplayBS] = useState(false);
   const [displayC, setDisplayC] = useState(false);
 
   // as compomnentDidMount
   useEffect(() => {
     setTimeout(() => setDisplayA(true), 500);
     setTimeout(() => setDisplayB(true), 1000);
-    setTimeout(() => setDisplayBL(true), 1500);
+    setTimeout(() => setDisplayBS(true), 1500);
     setTimeout(() => setDisplayC(true), 3000);
   }, []);
 
-  const bClasses = displayBL ? 'b b--large' : 'b';
+  const bClasses = displayBS ? 'b b--shrink' : 'b';
 
   return (
     <div className="App">
